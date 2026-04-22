@@ -1,5 +1,8 @@
+variable "location" {
+  default = "East US"
+}
+
 variable "db_password" {
-  description = "Postgres password"
-  type        = string
-  sensitive   = true
+  type      = string
+  sensitive = true
 }
