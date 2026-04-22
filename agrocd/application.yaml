@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/rohank1510/springboot-azure-gitops
     targetRevision: main
-    path: k8s/overlays/dev
+    path: helm/springboot-app
   syncPolicy:
     automated:
       prune: true
