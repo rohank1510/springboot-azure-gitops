@@ -45,6 +45,33 @@ This project demonstrates a production-oriented deployment of a Spring Boot appl
 The design focuses on:
 Secure handling of credentials using Kubernetes Secrets and Terraform variables
 Scalable workloads using Horizontal Pod Autoscaler
+
+Security
+Secrets managed via Terraform variables (not hardcoded)
+Kubernetes Secrets used for runtime injection
+Actuator endpoints restricted
+
+Scalability
+Horizontal Pod Autoscaler configured
+Resource limits defined
+
+Resiliency
+Liveness & readiness probes
+PodDisruptionBudget ensures uptime
+
+Networking
+NetworkPolicies restrict traffic
+Ingress used instead of LoadBalancer
+
+GitOps
+CI builds Docker image
+ArgoCD deploys automatically
+
+Learnings
+Real-world infra requires security-first design
+GitOps must be end-to-end connected
+Kubernetes needs more than deployments (HPA, PDB, NetworkPolicy)
+
 Resilient deployments using readiness/liveness probes and PodDisruptionBudget
 Controlled network access using Kubernetes NetworkPolicies
 GitOps-based continuous delivery using ArgoCD
