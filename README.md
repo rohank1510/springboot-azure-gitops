@@ -37,3 +37,17 @@ kubectl apply -f argocd/
 
 ### 5. Monitoring
 helm install monitoring prometheus-community/kube-prometheus-stack
+
+### 🧠 Architecture Story
+
+This project demonstrates a production-oriented deployment of a Spring Boot application using GitOps and Infrastructure as Code.
+
+The design focuses on:
+Secure handling of credentials using Kubernetes Secrets and Terraform variables
+Scalable workloads using Horizontal Pod Autoscaler
+Resilient deployments using readiness/liveness probes and PodDisruptionBudget
+Controlled network access using Kubernetes NetworkPolicies
+GitOps-based continuous delivery using ArgoCD
+
+The application is containerized and deployed on Kubernetes, with CI/CD handled via GitHub Actions and deployment managed through ArgoCD.
+
